@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "version": "1.0",
+  "author": "Leadwire Team",
+  "name": "MsgGendarmerie Organique",
+  "description": "Messagerie Gendarmerie Organique",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "extensions@thunderbird.net"
+    }
+  },
+  "permissions": [
+    "compose",
+    "tabs",
+    "activeTab",
+    "menus",
+    "storage"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "options_ui": {
+    "page": "options.html"
+  },
+  "compose_action": {
+    "default_title": "Organique",
+    "default_popup": "msgorganic.html",
+    "default_area": "maintoolbar",
+    "default_icon": "icon.png"
+  }
+}

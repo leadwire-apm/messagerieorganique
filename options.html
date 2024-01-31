@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Item Manager Options</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 20px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    input[type="email"] {
+      padding: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 16px;
+      background-color: #4caf50;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    button#deleteSelectedBtn {
+      background-color: #e74c3c;
+    }
+  </style>
+</head>
+<body>
+  <h2>Paramétrage de messagerie Organique :</h2>
+  <form id="itemForm">
+    <input type="email" id="itemName" placeholder="Email Organique" required>
+    <button type="button" id="addItemBtn">Ajouter</button>
+  </form>
+  <ul id="itemList"></ul>
+  <button type="button" id="deleteSelectedBtn">Effacer</button>
+  <script src="options.js" defer></script>
+</body>
+</html>
