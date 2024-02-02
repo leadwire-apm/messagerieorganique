@@ -14,7 +14,9 @@
     "tabs",
     "activeTab",
     "menus",
-    "storage"
+    "storage",
+    "accountsIdentities",
+    "accountsRead"
   ],
   "background": {
     "scripts": [
@@ -29,5 +31,21 @@
     "default_popup": "msgorganic.html",
     "default_area": "maintoolbar",
     "default_icon": "icon.png"
+  },
+  "experiment_apis": {
+    "organicapi": {
+      "schema": "schema.json",
+      "parent": {
+        "scopes": [
+          "addon_parent"
+        ],
+        "paths": [
+          [
+            "organicapi"
+          ]
+        ],
+        "script": "implementation.js"
+      }
+    }
   }
 }

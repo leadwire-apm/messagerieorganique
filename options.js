@@ -36,12 +36,12 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   
   function getItemList() {
-    var itemList = localStorage.getItem('itemList');
+    var itemList = localStorage.getItem('organicList');
     return itemList ? JSON.parse(itemList) : [];
   }
   
   function saveItems(itemList) {
-    localStorage.setItem('itemList', JSON.stringify(itemList));
+    localStorage.setItem('organicList', JSON.stringify(itemList));
   }
   
   function renderItems() {

@@ -9,6 +9,14 @@
           "async": false,
           "parameters": [
           ]
+        },
+        {
+          "name": "getOrganicAccount",
+          "type": "function",
+          "description": "getOrganiquePref",
+          "async": false,
+          "parameters": [
+          ]
         }
       ]
     }
