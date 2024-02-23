@@ -1,24 +1,22 @@
 [
-    {
-      "namespace": "organicapi",
-      "functions": [
-        {
-          "name": "organicPrefs",
-          "type": "function",
-          "description": "init de preferences de msgorganic",
-          "async": false,
-          "parameters": [
-          ]
-        },
-        {
-          "name": "getOrganicAccount",
-          "type": "function",
-          "description": "getOrganiquePref",
-          "async": false,
-          "parameters": [
-          ]
-        }
-      ]
-    }
-  ]
-  
+  {
+    "namespace": "organicapi",
+    "functions": [
+      {
+        "name": "organicPrefs",
+        "type": "function",
+        "description": "init de preferences de msgorganic",
+        "async": true,
+        "parameters": []
+      },
+      {
+        "name": "getOrganicAccounts",
+        "type": "function",
+        "description": "getOrganiquePref",
+        "async": true,
+        "parameters": [
+        ]
+      }
+    ]
+  }
+]
