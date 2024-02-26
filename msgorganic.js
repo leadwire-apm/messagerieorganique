@@ -1,14 +1,7 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', async function () {
 
 
-  renderItemsFromPrefs();
-
-  document.getElementById('itemList').addEventListener('click', function (event) {
-    if (event.target.tagName === 'LI') {
-      handleItemClick(event.target.getAttribute('data-item'));
-    }
-  });
-
+  await renderItemsFromPrefs();
   async function renderItemsFromPrefs() {
     var itemList = await getItemListFromPrefs();
     var listContainer = document.getElementById('itemList');
@@ -19,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
       li.textContent = "Configurer les adresses organiques";
       listContainer.appendChild(li);
     }
-    itemList.emails.forEach(function (item ) {
+    itemList.emails.forEach(function (item) {
       var li = document.createElement('li');
       li.setAttribute('data-item', item.email);
       li.textContent = item.email;
@@ -50,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let details = await messenger.compose.getComposeDetails(tabs[0].id);
     await addReplyTo(details, tabs[0].id, item);
     await addExpediteur(details, tabs[0].id);
-    await changeFrom(details, tabs[0].id,item);
+    await changeFrom(details, tabs[0].id, item);
   }
 
 
@@ -78,10 +71,10 @@ document.addEventListener('DOMContentLoaded', function () {
     await messenger.compose.setComposeDetails(tabId, details);
 
     let afterModify = await messenger.compose.getComposeDetails(tabId);
-    console.log({ afterModify });  }
+    console.log({ afterModify });
+  }
   async function changeFrom(details, tabId, item) {
     let email = "<" + item + ">";
-    // get Name of email "Messagerie Organique"
     let el = await getItemListFromPrefs();
     details.from = el.name + email;
     await messenger.compose.setComposeDetails(tabId, details);

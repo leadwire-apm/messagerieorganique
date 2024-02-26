@@ -8,7 +8,6 @@ var organicapi = class extends ExtensionCommon.ExtensionAPI {
             Services.prefs.setCharPref("mail.compose.other.header", pref + ",X-Expediteur");
           }
 
-          Services.prefs.setCharPref("mail.extensions.messagerieorganique.", "localhost");
         },
         async getOrganicAccounts() {
           let accounts = Services.prefs.getCharPref("mail.accountmanager.accounts").split(',');
