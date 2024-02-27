@@ -1,4 +1,4 @@
 // Init
 browser.runtime.onInstalled.addListener(() => {
-  messenger.organicapi.organicPrefs();
+  // messenger.organicapi.organicPrefs();
 });

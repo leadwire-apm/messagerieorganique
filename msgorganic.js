@@ -62,9 +62,9 @@ document.addEventListener('DOMContentLoaded', async function () {
   }
 
   async function addExpediteur(details, tabId) {
-    let account = await messenger.identities.getDefault('account1');
-    if (!details.customHeaders.includes({ "X-Expediteur": account.email })) {
-      details.customHeaders.push({ "name": "X-Expediteur", "value": account.email });
+    let email = await details.from;
+    if (!details.customHeaders.includes({ "X-Expediteur": email })) {
+      details.customHeaders.push({ "name": "X-Expediteur", "value": email });
       // details.cc.push("test@test.com");
       console.log(details);
     }
